@@ -2,6 +2,6 @@
     namespace App\Table;
 
     use \Core\Table\Table;
-    class AdminsTable extends  Table{
+    class AdminTable extends  Table{
 
     }

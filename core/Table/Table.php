@@ -17,6 +17,15 @@
             }
         }
 
+        public function extractRecord($key, $value){
+            $records = $this->all();
+            $return = [];
+            foreach($records as $v){
+                $return[$v->$key] = $v->$value;
+            }
+            return $return;
+        }
+
         public function all(){
             return $this->query('SELECT * FROM '. $this->table .' ORDER BY date DESC');
         }

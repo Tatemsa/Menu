@@ -14,6 +14,9 @@
             $label = ' <label for="exampleInputEmail1" class="form-label">'. $label .'</label>';
             if($type === 'textarea'){
                 $input = '<textarea class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="'. $name .'">'. $this->getValue($name) .'</textarea>';
+            } else if($type === 'hidden'){
+                $input = '<input type="'. $type .'" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="'. $name .'" value="'. $_SESSION['auth'] .'" >';
+                
             } else {
                 $input = '<input type="'. $type .'" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="'. $name .'" >';
                 

@@ -1,31 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-</head>
-<body>
-    <div>
-        <h1>Liste des plats <a href="add.php">Ajouter</a></h1>
-    </div>
-    <table>
-        <thead>
+<h1>Administration des repas</h1>
+
+<p>
+    <a href="?p=admin.admins.add&id=<?=$_SESSION['auth']?>" class="btn btn-success">Ajouter</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Actions</td>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($items as $item): ?>
             <tr>
-                <th>N°</th>
-                <th>Nom</th>
-                <th>Description</th>
-                <th>Prix</th>
-                <th>Categorie</th>
-                <th>Action</th>
+                <td><?= $item->id; ?></td>
+                <td><?= $item->name; ?></td>
+                <td>
+                    <a href="?p=admin.admins.edith&id=<?= $item->id; ?>" class="btn btn-primary">Modifier</a>
+                    
+                    <form action="?p=admin.admins.delete" method="post" style="display: inline">
+                        <input type="hidden" name="id" value="<?= $item->id; ?>">
+                        <button type="submit" class="btn btn-danger">Supprimer</button>
+                    </form>
+                </td>
             </tr>
-        </thead>
-        <tbody>
-            <form action="dashboard.php" method="post">
-                <input type="hidden" name="logout" value="OUI">
-                <button type="submit">Deconnexion</button>
-            </form>
-        </tbody>
-    </table>
-</body>
-</html>
+        <?php endforeach ?>
+    </tbody>
+</table>
