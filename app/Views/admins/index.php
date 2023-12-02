@@ -2,6 +2,7 @@
 
 <p>
     <a href="?p=admin.admins.add&id=<?=$_SESSION['auth']?>" class="btn btn-success">Ajouter</a>
+    <a href="?p=admin.admins.dashboard&id=<?=$_SESSION['auth']?>" class="btn btn-primary">Voir l'affichage</a>
 </p>
 
 <table class="table">

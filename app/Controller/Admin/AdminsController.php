@@ -52,4 +52,8 @@
                 }
             }
         }
+
+        public function dashboard(){
+            $this->render('admins.dashboard');
+        }
     }

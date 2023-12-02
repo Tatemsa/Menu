@@ -15,7 +15,7 @@ class UsersController extends AppController{
         if(!empty($_POST)){
             $auth = new \Core\Auth\DBAuth(App::getInstanceDb()->getDb());
             if($auth->login($_POST['email'], $_POST['password'], $this->users)){
-                header('Location: index.php?p='. $this->user .'.'. $this->users .'.index&id='.$auth->getUserId());
+                header('Location: index.php?p='. $this->user .'.'. $this->users .'.index&category_id');
             } else {
                $errors = true;
             }

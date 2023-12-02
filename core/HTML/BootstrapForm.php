@@ -49,7 +49,7 @@
          * @return string
          */
         public function submit(){
-            return $this->surround('<button type="submit" class="btn btn-primary">Enregistrer</button>');
+            return $this->surround('<button type="submit" class=btn btn-primary btn-block loginbtn">Enregistrer</button>');
         }
 
         /**

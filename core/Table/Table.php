@@ -34,6 +34,10 @@
             return $this->query('SELECT * FROM '. $this->table .' WHERE id=?', [$id], true);
         }
 
+        public function findWithCategory($category_id){
+            return $this->query('SELECT * FROM '. $this->table .' WHERE category_id=?', [$category_id]);
+        }
+
         public function create($fields){
             $sql_parts = [];
             $attributes = [];

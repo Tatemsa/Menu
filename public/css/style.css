@@ -1,4 +1,4 @@
-.post {
+/* .post {
     border : 1px solid;
     border-radius: 5px;
     padding: 5px;
@@ -8,4 +8,40 @@
 .newpost {
     
     padding-left: 25%;
+} 
+
+.btn{
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: transparent;
+    border: 1px solid #ffffff80;
+    transition: -5s ease;
+    border-color: #00e1ff;
+}
+
+.btn:hover,:focus{
+    background: #00eeff;
+    border: 1px solid #00e1ff;;
+    text-shadow: 0 0 5px #ffffff,
+                0 0 10px #ffffff,
+                0 0 20px #ffffff;
+    box-shadow: 0 0 5px #00e1ff,
+                0 0 20px #00e1ff,
+                0 0 50px #00e1ff,
+                0 0 100px #00e1ff;
+}
+
+*/
+.content{
+    margin-left: 34%;
+    margin-top: 10%;
+    border: 2px solid rgb(178, 179, 180);
+    border-radius: 7px;
+    width: 350px;
+    height: 300px;
+    text-align: center;
+}
+
+.formulaire{
+    padding: 10px;
 }
